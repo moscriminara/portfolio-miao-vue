@@ -1,0 +1,147 @@
+body {
+    background-image: url("images/white_bg.avif");
+    background-size: cover;
+}
+@font-face {
+    font-family: "generalfont";
+    src: url("fonts/textfont02.ttf") format("truetype");
+}
+.page{
+    display: block;
+}
+.topbar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(105, 105, 105);
+    z-index: 1000;
+}
+.topbar_ui {
+    width: 100%;
+    position: fixed;
+    top: 12px;
+}
+.topbar_content {
+    font-family: "generalfont";
+    font-size: 25px;
+    color: white;
+    margin-left: 6%;
+    position: relative;
+    top: 25%;
+    left: 20px;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+.topbar_content:hover {
+    color: rgb(197, 197, 197);
+    font-size: 30px;
+}
+.topbar_logo {
+    position: fixed;
+    z-index: 2000;
+    transform-origin: left top;
+    transform: scale(0.45);
+    left: 2%;
+    top: 1%;
+}
+.content {
+    display: block;
+    color: black;
+    font-family: "generalfont";
+    font-size: 20px;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+h1 {
+    font-family: "generalfont";
+    font-style: bold;
+    font-size: 80px;
+    text-align: center;
+}
+.creators_pics {
+    margin:5% auto 2% auto;
+    border: solid black 1px;
+    width: 80%;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.vtbox {
+    justify-content: center;
+    text-align: center;
+}
+input {
+    font-family: "generalfont";
+    font-size: 50px;
+    margin: 17% 0 5% 0;
+    width: 50%;
+    height: 60px;
+    opacity: 0.8;
+}
+button {
+    font-family: "generalfont";
+    width: 60px;
+    height: 60px;
+    margin: 17% 0 5% 1%;
+    font-size: 25px;
+    opacity: 0.8;
+}
+.contactButton {
+    margin: 2% 0 0 0;
+    width: 70%;
+    font-size: 20px;
+}
+span {
+    font-size: 40px;
+}
+textarea {
+    resize: none;
+    width: 70%;
+    font-family: "generalfont";
+    font-size: 25px;
+    margin-top: -3%;
+    opacity: 0.8;
+}
+.notice {
+    display: block;
+    font-size:30px;
+    font-family: "generalfont";
+    max-width: 60%;
+    margin: 3% auto 0 auto;
+    text-align: center;
+}
+.emailEnter {
+    font-size:40px;
+    width:70%; 
+    margin-top:5%;
+}
+.showHtml {
+    margin: 5% 1%;
+    overflow: auto;
+    color: aqua;
+}
+.bruh {
+    display: block;
+    margin:auto auto 100% auto;
+}
+
+.fade-enter-active {
+    transition: opacity 1.0s ease;
+}
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+}
+.fade-enter-to, .fade-leave-from {
+    opacity: 1;
+}

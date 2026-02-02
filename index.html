@@ -1,0 +1,101 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mobile_style.css">
+    <link rel="icon" href="./images/home.png">
+    <title>
+        Super Useless Website
+    </title>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <nav class="topbar">
+            <router-link to="/">
+                <img src="./images/home.png" class="topbar_logo">
+            </router-link>
+            <div class="topbar_ui">
+                <router-link class="topbar_content" to="/achievements">Achievements</router-link>
+                <router-link class="topbar_content" to="/products">Products</router-link>
+                <router-link class="topbar_content" to="/creator">Creator</router-link>
+                <router-link class="topbar_content" to="/contact">Contact</router-link>
+                <router-link class="topbar_content" to="/source" style="margin-right: 30%;">Source</router-link>
+            </div>
+        </nav>
+        <transition name="fade" mode="out-in">
+            <router-view></router-view>
+        </transition>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/creator.js"></script>
+    <script src="./js/source.js"></script>
+    <script type="module" src="js/navigation.js"></script>
+
+    <template id="homeTemplate">
+        <section class="page">
+            <weather></weather>
+        </section>
+    </template>
+
+    <template id="achievementsTemplate">
+        <section class="page">
+            <h1><br><br>
+                ACHIEVEMENTS
+            </h1>
+            <a class="content">
+                Not now.
+            </a>
+        </section>
+    </template>
+
+    <template id="productsTemplate">
+        <section class="page">
+            <h1><br><br>
+                PRODUCTS
+            </h1>
+            <router-link class="content" to="/products/weather">
+                <h2>Weather</h2>
+            </router-link>
+        </section>
+    </template>
+
+    <template id="weatherTemplate">
+        <section class="page">
+            <weather></weather>
+        </section>
+    </template>
+
+    <template id="creatorTemplate">
+        <section class="page">
+            <creator></creator>
+        </section>
+    </template>
+
+    <template id="contactTemplate">
+        <section class="page">
+            <contact></contact>
+        </section>
+    </template>
+
+    <template id="sourceTemplate">
+        <section class="page">
+            <h1><br><br>
+                SOURCE
+            </h1>
+            <a class="content">
+                HTML of this Website
+            </a>
+            <br>
+            <a class="content">
+                I am fixing the display just wait...
+            </a>
+        </section>
+    </template>
+    
+</body>
+</html>
