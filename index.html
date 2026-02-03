@@ -13,14 +13,14 @@
     <div id="app" v-cloak>
         <nav class="topbar">
             <router-link to="/">
-                <img src="./images/home.png" class="topbar_logo">
+                <img src="./images/home.png" class="topbarLogo">
             </router-link>
-            <div class="topbar_ui">
-                <router-link class="topbar_content" to="/achievements">Achievements</router-link>
-                <router-link class="topbar_content" to="/products">Products</router-link>
-                <router-link class="topbar_content" to="/creator">Creator</router-link>
-                <router-link class="topbar_content" to="/contact">Contact</router-link>
-                <router-link class="topbar_content" to="/source" style="margin-right: 30%;">Source</router-link>
+            <div class="topbarUi">
+                <router-link class="topbarContent" to="/achievements">Achievements</router-link>
+                <router-link class="topbarContent" to="/products">Products</router-link>
+                <router-link class="topbarContent" to="/creator">Creator</router-link>
+                <router-link class="topbarContent" to="/contact">Contact</router-link>
+                <router-link class="topbarContent" to="/source" style="margin-right: 30%;">Source</router-link>
             </div>
         </nav>
         <transition name="fade" mode="out-in">
@@ -38,7 +38,15 @@
 
     <template id="homeTemplate">
         <section class="page">
-            <weather></weather>
+            <div class="homeHeading">
+                <a>
+                    This is a Portfolio Website, very cool, and cool, and cool.
+                </a>
+                <br>
+                <a style="margin-top: 5%;">
+                    "And Cool."
+                </a>
+            </div>
         </section>
     </template>
 
@@ -48,8 +56,21 @@
                 ACHIEVEMENTS
             </h1>
             <a class="content">
-                Not now.
+                ------Grok Academy------
             </a>
+            <div class="box">
+                <img class="pics" src="./images/certificate1.png">
+                <img class="pics" src="./images/certificate2.png">
+            </div>
+            <br>
+            <a class="content">
+                ------Code Combat------
+            </a>
+            <div class="box">
+                <img class="pics" src="./images/certificate_codecombat1.png">
+                <img class="pics" src="./images/certificate_codecombat1.png">
+            </div>
+            
         </section>
     </template>
 
@@ -58,9 +79,11 @@
             <h1><br><br>
                 PRODUCTS
             </h1>
-            <router-link class="content" to="/products/weather">
-                <h2>Weather</h2>
-            </router-link>
+            <div class="box">
+                <router-link to="/products/weather">
+                    <img class="productsPics" src="./images/weather.png">
+                </router-link>
+            </div>
         </section>
     </template>
 

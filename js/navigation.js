@@ -1,8 +1,5 @@
 const Home = {
-    template: "#homeTemplate",
-    components : {
-        "weather": WeatherPage
-    }
+    template: "#homeTemplate"
 }
 const Achievements = {
     template: "#achievementsTemplate"

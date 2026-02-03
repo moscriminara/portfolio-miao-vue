@@ -2,59 +2,70 @@ body {
     background-image: url("images/white_bg.avif");
     background-size: cover;
 }
+
+
 @font-face {
     font-family: "generalfont";
-    src: url("fonts/textfont02.ttf") format("truetype");
+    src: url("fonts/textfont02.ttf");
 }
 .page{
     display: block;
 }
+
+
 .topbar {
+    position: fixed;
+    background-color: rgb(105, 105, 105);
     width: 100%;
     height: 50px;
-    position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(105, 105, 105);
     z-index: 1000;
 }
-.topbar_ui {
-    width: 100%;
+.topbarUi {
     position: fixed;
+    width: 100%;
     top: 12px;
 }
-.topbar_content {
+.topbarContent {
+    position: relative;
     font-family: "generalfont";
     font-size: 25px;
     color: white;
     margin-left: 6%;
-    position: relative;
     top: 25%;
     left: 20px;
     text-decoration: none;
     transition: 0.4s ease;
 }
-.topbar_content:hover {
+.topbarContent:hover {
     color: rgb(197, 197, 197);
     font-size: 30px;
 }
-.topbar_logo {
+.topbarLogo {
     position: fixed;
-    z-index: 2000;
-    transform-origin: left top;
+    
+    top: -12px;
+    transform-origin: center;
     transform: scale(0.45);
-    left: 2%;
-    top: 1%;
+    z-index: 2000;
+    transition: 0.4s ease;
 }
+.topbarLogo:hover {
+    filter:contrast(180%);
+    transform: scale(0.52);
+}
+
+
 .content {
     display: block;
-    color: black;
     font-family: "generalfont";
     font-size: 20px;
-    max-width: 60%;
-    margin: 0 auto;
+    color: black;
     text-align: center;
+    max-width: 60%;
     line-height: 1.5;
+    margin: 0 auto;
     word-wrap: break-word;
     text-decoration: none;
 }
@@ -64,10 +75,28 @@ h1 {
     font-size: 80px;
     text-align: center;
 }
-.creators_pics {
-    margin:5% auto 2% auto;
+.homeHeading {
+    display: block;
+    text-align: center;
+    margin-top: 24%;
+    font-family: "generalfont";
+    font-size: 30px;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+.pics {
+    width: 30%;
+    margin: 3% 1%;
     border: solid black 1px;
+}
+.creatorsPics {
     width: 80%;
+    margin:5% auto;
+    border: solid black 1px;
+}
+.productsPics {
+    width: 60%;
+    margin: 5% 1%;
 }
 .box {
     display: flex;
@@ -78,45 +107,49 @@ h1 {
     justify-content: center;
     text-align: center;
 }
+
+
 input {
     font-family: "generalfont";
     font-size: 50px;
-    margin: 17% 0 5% 0;
+    opacity: 0.8;
     width: 50%;
     height: 60px;
-    opacity: 0.8;
+    margin: 17% 0 5% 0;
 }
 button {
     font-family: "generalfont";
+    font-size: 25px;
+    opacity: 0.8;
     width: 60px;
     height: 60px;
     margin: 17% 0 5% 1%;
-    font-size: 25px;
-    opacity: 0.8;
-}
-.contactButton {
-    margin: 2% 0 0 0;
-    width: 70%;
-    font-size: 20px;
 }
 span {
     font-size: 40px;
 }
-textarea {
-    resize: none;
+
+
+.contactButton {
+    font-size: 20px;
     width: 70%;
+    margin: 2% 0 0 0;
+}
+textarea {
     font-family: "generalfont";
     font-size: 25px;
-    margin-top: -3%;
     opacity: 0.8;
+    width: 70%;
+    margin-top: -3%;
+    resize: none;
 }
 .notice {
     display: block;
     font-size:30px;
     font-family: "generalfont";
+    text-align: center;
     max-width: 60%;
     margin: 3% auto 0 auto;
-    text-align: center;
 }
 .emailEnter {
     font-size:40px;
@@ -124,24 +157,29 @@ textarea {
     margin-top:5%;
 }
 .showHtml {
+    color: aqua;
     margin: 5% 1%;
     overflow: auto;
-    color: aqua;
 }
+
+
 .bruh {
     display: block;
     margin:auto auto 100% auto;
 }
 
+
 .fade-enter-active {
-    transition: opacity 1.0s ease;
+    transition: all 0.8s ease;
 }
 .fade-leave-active {
-    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
 }
 .fade-enter-from, .fade-leave-to {
     opacity: 0;
+    margin-right: 10%;
 }
 .fade-enter-to, .fade-leave-from {
     opacity: 1;
+    margin-right: 0%;
 }

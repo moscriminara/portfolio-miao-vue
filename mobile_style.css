@@ -2,27 +2,35 @@
     .topbar {
         height: 60px;
     }
-    .topbar_logo {
-        top: 13px;
+    .topbarLogo {
+        top: -7px;
+        left: -19px;
     }
-    .topbar_ui {
+    .topbarUi {
         width: 100%;
         height: 60px;
         overflow: auto;
         white-space: nowrap;
         left: 15%;
     }
-    .topbar_ui::-webkit-scrollbar {
+    .topbarUi::-webkit-scrollbar {
         display: none;
     }
-    .topbar_content {
+    .topbarContent {
         font-size: 30px;
         line-height: 10px;
         margin-left: -5%;
         margin-right: 15%;
     }
     h1 {
-        font-size: 50px;
+        font-size: 40px;
+    }
+    .homeHeading {
+        margin-top: 200px;
+        font-size: 25px;
+    }
+    .pics {
+        width: 80%;
     }
     span {
         font-size: 25px;
@@ -57,5 +65,8 @@
     }
     .bruh {
         margin:auto auto 1000% auto;
+    }
+    .box {
+        display: block;
     }
 }
