@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <div id="app" v-cloak>
+<!--Navigation Bar-->
+    <div id="app">
         <nav class="topbar">
             <router-link to="/">
                 <img src="./images/home.png" class="topbarLogo">
@@ -28,28 +29,31 @@
         </transition>
     </div>
 
+<!--Js Files & Vue Library--->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
     <script src="./js/weather.js"></script>
     <script src="./js/contact.js"></script>
     <script src="./js/creator.js"></script>
     <script src="./js/source.js"></script>
-    <script type="module" src="js/navigation.js"></script>
+    <script src="./js/navigation.js"></script>
 
+<!--Home-->
     <template id="homeTemplate">
         <section class="page">
             <div class="homeHeading">
                 <a>
                     This is a Portfolio Website, very cool, and cool, and cool.
                 </a>
-                <br>
-                <a style="margin-top: 5%;">
+                <br><br>
+                <a style="font-size:45px">
                     "And Cool."
                 </a>
             </div>
         </section>
     </template>
 
+<!--Achievements-->
     <template id="achievementsTemplate">
         <section class="page">
             <h1><br><br>
@@ -58,7 +62,7 @@
             <a class="content">
                 ------Grok Academy------
             </a>
-            <div class="box">
+            <div class="overflowBox">
                 <img class="pics" src="./images/certificate1.png">
                 <img class="pics" src="./images/certificate2.png">
             </div>
@@ -66,14 +70,16 @@
             <a class="content">
                 ------Code Combat------
             </a>
-            <div class="box">
+            <div class="overflowBox">
                 <img class="pics" src="./images/certificate_codecombat1.png">
-                <img class="pics" src="./images/certificate_codecombat1.png">
+                <img class="pics" src="./images/certificate_codecombat2.png">
+                <img class="pics" src="./images/certificate_codecombat3.png">
             </div>
             
         </section>
     </template>
 
+<!--Products-->
     <template id="productsTemplate">
         <section class="page">
             <h1><br><br>
@@ -87,38 +93,37 @@
         </section>
     </template>
 
+<!--Products Projects-->
+    <!--Weather-->
     <template id="weatherTemplate">
         <section class="page">
             <weather></weather>
         </section>
     </template>
 
+<!--Creator-->
     <template id="creatorTemplate">
         <section class="page">
             <creator></creator>
         </section>
     </template>
 
+<!--Contact-->
     <template id="contactTemplate">
         <section class="page">
             <contact></contact>
         </section>
     </template>
 
+<!--Source-->
     <template id="sourceTemplate">
         <section class="page">
-            <h1><br><br>
-                SOURCE
-            </h1>
-            <a class="content">
-                HTML of this Website
-            </a>
-            <br>
-            <a class="content">
-                I am fixing the display just wait...
-            </a>
+            <sources></sources>
         </section>
     </template>
-    
+
+
+
+<!--Ignore the lines below-->
 </body>
 </html>

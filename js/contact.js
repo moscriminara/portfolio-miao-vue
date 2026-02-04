@@ -35,9 +35,9 @@ const ContactPage = {
 
     data() {
         return {
-        email: '',
-        content: '',
-        result: ''
+            email: '',
+            content: '',
+            result: ''
         }
     },
 
@@ -45,11 +45,11 @@ const ContactPage = {
         async submit() {
         if (!this.email || !this.content || !this.email.includes('@')) {
             this.result = `
-            <a class="notice">
-                ${!this.email || !this.content
-                ? "Come on at least fill one word each."
-                : "No way you have no @ in your email."}
-            </a>
+                <a class="notice">
+                    ${!this.email || !this.content
+                    ? "Come on at least fill one word each."
+                    : "No way you have no @ in your email."}
+                </a>
             `
             return
         }
@@ -63,18 +63,18 @@ const ContactPage = {
 
         try {
             const res = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
+                method: "POST",
+                body: formData
             })
 
             const data = await res.json()
 
             if (data.success) {
-            this.result = `<a class="notice">Success Yeahhh</a>`
-            this.email = ''
-            this.content = ''
+                this.result = `<a class="notice">Success Yeahhh</a>`
+                this.email = ''
+                this.content = ''
             } else {
-            this.result = `<a class="notice">I feel weird.</a>`
+                this.result = `<a class="notice">I feel weird.</a>`
             }
         } catch {
             this.result = `<a class="notice">Hell no I think we're in the worst situation now.</a>`

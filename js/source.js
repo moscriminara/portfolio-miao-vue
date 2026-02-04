@@ -1,21 +1,25 @@
 const SourcePage = {
     template: `
         <section class="page">
-            <h1><br><br>
-                SOURCE
-            </h1>
-            <a class="content">
-                HTML of this Website
-            </a>
-            <pre class="showHtml">{{ source }} </pre>
+            <div>
+                <h1><br><br>
+                    SOURCE
+                </h1>
+                <a class="content">
+                    HTML of this Website
+                </a>
+            </div>
+            <pre class="showHtml">{{ htmlSource }}</pre>
         </section>
     `,
     data() {
         return {
-            source: ''
+            htmlSource: ''
         }
     },
     mounted() {
-        this.source = document.documentElement.outerHTML;
+        fetch('./index.html')
+            .then(r => r.text())
+            .then(t => this.htmlSource = t)
     }
 }

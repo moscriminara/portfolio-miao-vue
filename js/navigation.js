@@ -22,7 +22,7 @@ const Contact = {
 const Source = {
     template: "#sourceTemplate",
     components: {
-        "source": SourcePage
+        "sources": SourcePage
     }
 }
 const Weather = {
@@ -32,13 +32,13 @@ const Weather = {
     }
 }
 const routes = [
-    { path: '/', component: Home },
-    { path: '/achievements', component: Achievements },
-    { path: '/products', component: Products },
-    { path: '/products/weather', component: Weather },
-    { path: '/creator', component: Creator },
-    { path: '/contact', component: Contact },
-    { path: '/source', component: Source },
+    {path: '/', component: Home},
+    {path: '/achievements', component: Achievements},
+    {path: '/products', component: Products},
+    {path: '/products/weather', component: Weather},
+    {path: '/creator', component: Creator},
+    {path: '/contact', component: Contact},
+    {path: '/source', component: Source},
 ]
 
 const router = VueRouter.createRouter({

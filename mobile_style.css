@@ -16,6 +16,12 @@
     .topbarUi::-webkit-scrollbar {
         display: none;
     }
+    .showHtml {
+        font-size: 12px;
+    }
+    .showHtml::-webkit-scrollbar {
+        display: none;
+    }
     .topbarContent {
         font-size: 30px;
         line-height: 10px;
@@ -27,10 +33,10 @@
     }
     .homeHeading {
         margin-top: 200px;
-        font-size: 25px;
+        font-size: 25px; 
     }
     .pics {
-        width: 80%;
+        width: 90%;
     }
     span {
         font-size: 25px;
@@ -68,5 +74,8 @@
     }
     .box {
         display: block;
+    }
+    .overflowBox {
+        justify-content: left;
     }
 }
