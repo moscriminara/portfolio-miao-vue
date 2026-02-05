@@ -27,15 +27,23 @@ const Source = {
 }
 const Weather = {
     template: "#weatherTemplate",
-    components : {
+    components: {
         "weather": WeatherPage
     }
 }
+const Player = {
+    template: "#playerTemplate",
+    // components: {
+    //     "player": PlayerPage
+    // }
+}
+
 const routes = [
     {path: '/', component: Home},
     {path: '/achievements', component: Achievements},
     {path: '/products', component: Products},
     {path: '/products/weather', component: Weather},
+    {path: '/products/player', component: Player},
     {path: '/creator', component: Creator},
     {path: '/contact', component: Contact},
     {path: '/source', component: Source},

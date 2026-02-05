@@ -3,11 +3,11 @@ body {
     background-size: cover;
 }
 
-
 @font-face {
     font-family: "generalfont";
-    src: url("fonts/textfont02.ttf");
+    src: url("./font/favourite.ttf");
 }
+
 .page{
     display: block;
 }
@@ -97,8 +97,8 @@ h1 {
     border: solid black 1px;
 }
 .productsPics {
-    width: 60%;
-    margin: 5% 1%;
+    width: 50%;
+    margin: 10% 1%;
 }
 .box {
     display: flex;
@@ -175,7 +175,6 @@ textarea {
     display: block;
     margin:auto auto 100% auto;
 }
-
 
 .fade-enter-active {
     transition: all 0.8s ease;

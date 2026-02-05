@@ -35,7 +35,6 @@ const WeatherPage = {
         async goWeather() {
             if (!this.location.trim()) {
                 this.error = "Enter something bro.";
-                this.weather = null;
                 return;
             }
 
@@ -43,11 +42,11 @@ const WeatherPage = {
                 this.error = null;
                 this.weather = null;
 
-                const locUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${this.location}&count=1&language=en&format=json`;
+                const locUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${this.location.trim()}&count=1&language=en&format=json`;
                 const locRes = await fetch(locUrl);
                 const locData = await locRes.json();
 
-                if (!locData.results || locData.results.length === 0) {
+                if (!locData.results || !locData.results.length === 0) {
                     this.error = `I can't help you bro.`;
                     return;
                 }
@@ -69,8 +68,7 @@ const WeatherPage = {
                 };
 
             } catch (err) {
-                console.error(err);
-                this.error = "Error fetching weather";
+                this.error = "I am broken, for now";
             }
         }
     }

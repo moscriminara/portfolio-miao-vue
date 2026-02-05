@@ -33,6 +33,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
     <script src="./js/weather.js"></script>
+    <scirpt src="./js/player.js"></scirpt>
     <script src="./js/contact.js"></script>
     <script src="./js/creator.js"></script>
     <script src="./js/source.js"></script>
@@ -89,6 +90,9 @@
                 <router-link to="/products/weather">
                     <img class="productsPics" src="./images/weather.png">
                 </router-link>
+                <router-link to="/products/player">
+                    <img class="productsPics" src="./images/music.png">
+                </router-link>
             </div>
         </section>
     </template>
@@ -98,6 +102,12 @@
     <template id="weatherTemplate">
         <section class="page">
             <weather></weather>
+        </section>
+    </template>
+
+    <template id="playerTemplate">
+        <section class="page">
+            <player></player>
         </section>
     </template>
 
@@ -121,9 +131,5 @@
             <sources></sources>
         </section>
     </template>
-
-
-
-<!--Ignore the lines below-->
 </body>
 </html>

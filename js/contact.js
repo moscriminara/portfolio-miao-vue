@@ -57,7 +57,7 @@ const ContactPage = {
         this.result = `<a class="notice">Pigeon is ready to go...</a>`
 
         const formData = new FormData()
-        formData.append('access_key', 'a0473987-3dee-4379-a631-d92429e66dc2')
+        formData.append('access_key', "a0473987-3dee-4379-a631-d92429e66dc2")
         formData.append('email', this.email)
         formData.append('message', this.content)
 
