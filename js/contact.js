@@ -4,8 +4,9 @@ const ContactPage = {
             <h1><br><br>CONTACT</h1>
 
             <a class="content">Suggest anything you like.</a>
-
-            <div v-if="result" v-html="result"></div>
+            <transition name="fade" mode="out-in">
+                <div v-if="result" v-html="result"></div>
+            </transition>
 
             <form @submit.prevent="submit">
                 <div class="vtbox">

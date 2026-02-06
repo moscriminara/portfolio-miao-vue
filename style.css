@@ -78,14 +78,15 @@ h1 {
     cursor: default;
 }
 .homeHeading {
-    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
     text-align: center;
     margin-top: 24%;
     font-family: "generalfont";
     font-size: 30px;
     word-wrap: break-word;
     line-height: 1.5;
-    cursor: default;
 }
 .pics {
     width: 30%;
@@ -96,10 +97,18 @@ h1 {
     width: 80%;
     margin:5% auto;
     border: solid black 1px;
+    transition: 0.4s ease;
+}
+.creatorsPics:hover {
+    width: 90%;
 }
 .productsPics {
     width: 50%;
     margin: 10% 1%;
+    transition: 0.4s ease;
+}
+.productsPics:hover {
+    width: 60%;
 }
 .box {
     display: flex;

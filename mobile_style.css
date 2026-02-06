@@ -34,7 +34,8 @@
     }
     .homeHeading {
         margin-top: 200px;
-        font-size: 25px; 
+        font-size: 25px;
+        width: 90%;
     }
     .pics {
         width: 90%;
