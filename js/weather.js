@@ -42,7 +42,7 @@ const WeatherPage = {
                 this.error = null;
                 this.weather = null;
 
-                const locUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${this.location.trim()}&count=1&language=en&format=json`;
+                const locUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${this.location.trim()}&count=10&language=en&format=json`;
                 const locRes = await fetch(locUrl);
                 const locData = await locRes.json();
 

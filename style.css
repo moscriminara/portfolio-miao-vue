@@ -34,7 +34,6 @@ body {
     font-size: 25px;
     color: white;
     margin-left: 6%;
-    top: 25%;
     left: 20px;
     text-decoration: none;
     transition: 0.4s ease;
@@ -74,7 +73,9 @@ h1 {
     font-family: "generalfont";
     font-style: bold;
     font-size: 80px;
+    font-weight: lighter;
     text-align: center;
+    cursor: default;
 }
 .homeHeading {
     display: block;
