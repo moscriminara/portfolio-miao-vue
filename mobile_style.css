@@ -76,6 +76,9 @@
     .box {
         display: block;
     }
+    .weatherBox {
+        margin-top: 10%;
+    }
     .overflowBox {
         justify-content: left;
     }

@@ -7,7 +7,7 @@ const WeatherPage = {
             </div>
 
             <transition name="fade" mode="out-in">
-                <div v-if="weather">
+                <div v-if="weather" class="weatherBox">
                     <h1>{{ weather.name }} <span>in</span> {{ weather.country }}</h1>
                     <h2 class="content">Temperature: <span>{{ weather.temperature }} °C</span></h2>
                     <h2 class="content">Wind Speed: <span>{{ weather.windspeed }} km/h</span></h2>
@@ -18,7 +18,7 @@ const WeatherPage = {
                 <h1 v-else-if="error">{{ error }}</h1>
             </transition>
 
-            <div>
+            <div v-if="tips">
                 <a class="content" style="margin-top:5%;">This is a Portfolio Website, very cool, and cool, and cool.</a>
                 <a class="content" style="margin:3% auto 10% auto;">"And Cool."</a>
             </div>
@@ -28,17 +28,18 @@ const WeatherPage = {
         return {
             location: '',
             weather: null,
-            error: null
+            error: null,
+            tips: true
         }
     },
     methods: {
         async goWeather() {
-            if (!this.location.trim()) {
-                this.error = "Enter something bro.";
-                return;
-            }
-
             try {
+                if (!this.location.trim()) {
+                    this.error = "Enter something bro.";
+                    return;
+                }
+                
                 this.error = null;
                 this.weather = null;
 
@@ -46,7 +47,7 @@ const WeatherPage = {
                 const locRes = await fetch(locUrl);
                 const locData = await locRes.json();
 
-                if (!locData.results || !locData.results.length === 0) {
+                if (!locData.results) {
                     this.error = `I can't help you bro.`;
                     return;
                 }
@@ -68,7 +69,9 @@ const WeatherPage = {
                 };
 
             } catch (err) {
-                this.error = "I am broken, for now";
+                this.error = "I think it's the network issue.";
+            } finally {
+                this.tips = null
             }
         }
     }
